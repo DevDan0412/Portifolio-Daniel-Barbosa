@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700;800&display=swap');
+
+:root {
+  /* Arquitetura de Tipografia */
+  --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Fira Code', 'Courier New', Courier, monospace;
+
+  --color-body: #ffffff;
+  --color-cards: #f8f9fa;
+  --color-header-footer: #1a1a1a;
+  --color-text: #000000;
+  --color-secundary-text: #555555;
+  --color-icons-bottons: #1a1a1a;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: var(--font-body);
+    background-color: var(--color-body);
+    color: var(--color-body);
+    line-height: 1.6em;
+}
+
+main {
+    padding-top: 40px;
+    margin: 0 auto;
+    max-width: 80%;
+    width: 100%;
+    flex: 1 0 auto;
+    color: var(--color-text);
+}
+
+p {
+    text-shadow: 1px 1px 1px rgba(107, 107, 107, 0.459);
+}
+
+header {
+    display: flex;
+    padding: 20px 0px;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row nowrap;
+    background-color: var(--color-header-footer);
+    font-family: var(--font-heading);
+    color: white;
+}
+
+nav > a {
+    color: var(--color-cards);
+    text-decoration: none;
+    padding: 0px 20px;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+}
+
+section.info {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+article#redes {
+    display: flex;
+    flex-flow: row nowrap; 
+    align-items: center; 
+    gap: 0px; 
+    margin-right: 90px;
+}
+article#redes a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article#redes img {
+    align-self: center;
+    max-height: 30px;
+    max-width: 30px;
+    margin: 5px;
+}
+
+article#redes > img#icone {
+    max-height: 80px;
+    max-width: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+article#apresentacao > h1 {
+    line-height: 1.2em;
+    text-shadow: 2px 2px 3px rgba(128, 128, 128, 0.462);
+}
+
+div#icons img {
+    align-self: center;
+    max-height: 25px;
+    max-width: 30%;
+}
+
+section.conteudo {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+section.conteudo > h2 {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-shadow: 2px 2px 3px rgba(128, 128, 128, 0.458);
+}
+
+div#cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+}
+
+div#cards > article {
+    text-align: center;
+    background-color: var(--color-cards);
+    padding: 10px 10px;
+    border: 1px solid rgba(69, 69, 69, 0.11);
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
+    align-self: center;
+    flex: 0 0 260px;
+    max-width: 100%;
+}
+
+div#cards p {
+    padding-left: 20px;
+    text-align: left;
+}
+
+div#cards > article > img {
+    border-radius: 20px;
+    border: 1px solid rgba(111, 111, 111, 0.447);
+}
+
+div.buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 5px;
+    gap: 5px;
+}
+
+a.demo {
+    background-color: var(--color-icons-bottons);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 3px rgba(91, 91, 91, 0.393);
+    text-decoration: none;
+}
+
+a.demo:hover {
+    text-decoration: underline;
+}
+
+a.cod {
+    background-color: white;
+    color: black;
+    outline: none;
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.337);
+    text-decoration: none;
+}
+
+a.cod:hover {
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-header-footer);
+    color: var(--color-body);
+    padding: 15px 0px;
+    margin-top: 60px;
+    font-weight: bold;
+}
+
+footer > div#icons {
+    filter: invert(100%);
+}
+
+@media (max-width: 768px) {
+  header, footer {
+    flex-direction: column;
+    height: auto; 
+    gap: 15px; 
+    text-align: center;
+  }
+
+  section.info {
+    flex-direction: column-reverse; 
+    text-align: center;
+    gap: 20px;
+  }
+
+  div#cards {
+    justify-content: center;
+}
+
+section.conteudo h2 {
+    text-align: center;
+}
+}
+
